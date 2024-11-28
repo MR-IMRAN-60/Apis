@@ -1,5 +1,5 @@
 const express = require('express');
-
+const { Imgur } = require('imgur-uploader-api')
 const { alldl } = require('imran-dlmedia');
 const path = require('path');
 const axios = require('axios')
@@ -57,6 +57,24 @@ app.get('/sim', async (req, res) => {
         console.error(error);
         res.status(500).json({ error: 'Failed to get response from external API' });
     }
+});
+
+app.get('/imgur', async (req, res) => {
+  const url = req.query.Url; 
+
+  if (!url) {
+    return res.status(400).json({ error: 'imageUrl query parameter is required' });
+  }
+
+  try {
+    
+    const result = await Imgur(url);
+
+    res.status(200).json(result);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: error.message });
+  }
 });
 
 app.listen(port, () => {
