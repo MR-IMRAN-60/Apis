@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> IMRAN API </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url(https://i.imgur.com/ts4brfg.jpeg) no-repeat center center fixed;
+            background-size: cover;
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+
+        .center {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #FF00BF;
+        }
+
+        footer {
+            margin-top: 50px;
+        }
+
+        .linkflex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+            ;
+        }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <h1 class="animated-rainbow">♡︎ IMRAN ♡︎</h1>
+
+        <p id="datetime"></p>
+        <table>
+            <tr>
+                <th class="animated-rainbow">𝙽𝚞𝚖𝚋𝚎𝚛</th>
+                <th class="animated-rainbow">𝙽𝚊𝚖𝚎</th>
+                <th class="animated-rainbow">𝙼𝚎𝚝𝚑𝚘𝚍</th>
+                <th class="animated-rainbow">𝙰𝚌𝚝𝚒𝚘𝚗</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Alldown</td>
+                <td>𝙶𝙴𝚃</td>
+                <td><a href="/api?url=">[ ➠ ]</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Simsimi</td>
+                <td>𝙶𝙴𝚃</td>
+                <td><a href="/sim?ask="> [ ➠ ]</a></td>
+            </tr <tr></tr>
+        </table>
+
+        <footer class="animated-rainbow">
+            <p>𝙲𝚛𝚎𝚍𝚒𝚝𝚜: Imran </p>
+        </footer>
+        <table></table>
+    </div>
+    <script></script>
+    <script>
+        function updateDateTime() {
+            var now = new Date();
+            var dateTimeString = now.toLocaleString();
+            document.getElementById("datetime").innerHTML = dateTimeString;
+        }
+        setInterval(updateDateTime, 1000);
+    </script>
+</body>
+
+</html>
