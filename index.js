@@ -1,6 +1,6 @@
 const express = require('express');
 const { Imgur } = require('imgur-uploader-api')
-const { alldl } = require('imran-dlmedia');
+const { alldl } = require('imran-alldl');
 const path = require('path');
 const axios = require('axios')
 
@@ -41,7 +41,7 @@ app.get('/sim', async (req, res) => {
 
     try {
         
-        const response = await axios.get('http://5.9.12.94:14642/sim', {
+        const response = await axios.get('https://simsimi-chatbot.vercel.app/sim', {
             params: {
                 ask: ask, 
             }
